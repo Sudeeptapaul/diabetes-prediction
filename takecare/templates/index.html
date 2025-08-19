@@ -1,0 +1,42 @@
+templates/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Health Predictor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #fceabb, #f8b500);
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .welcome-box {
+            margin-top: 15%;
+            background-color: rgba(255,255,255,0.9);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            font-weight: 700;
+            color: #333;
+        }
+        .btn-custom {
+            background-color: #f8b500;
+            color: white;
+            font-weight: bold;
+        }
+        .btn-custom:hover {
+            background-color: #e09e00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center welcome-box">
+        <h1>Welcome to the Health Risk Predictor</h1>
+        <p class="lead">Analyze patient data and predict potential health risks using machine learning.</p>
+        <a href="{% url 'home' %}" class="btn btn-custom btn-lg mt-3">Start Prediction</a>
+    </div>
+</body>
+</html>
