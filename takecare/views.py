@@ -8,8 +8,8 @@ model_path= os.path.join(settings.BASE_DIR,"takecare","model.pkl")
 with open(model_path,"rb") as file:
     model=pickle.load(file)
 # Create your views here.
-# def index(request):
-#     return render(request, 'index.html')
+def index(request):
+    return render(request, 'index.html')
 def home(request):
     # return render(request,"index.html")
     pred=None
@@ -27,5 +27,6 @@ def home(request):
         "prediction": pred
     }
     return render(request,"home.html",context)
+
 
 
